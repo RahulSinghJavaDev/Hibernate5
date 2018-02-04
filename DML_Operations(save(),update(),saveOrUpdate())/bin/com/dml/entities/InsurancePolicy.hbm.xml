@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dml.entities.InsurancePolicy" table="INSURANCE_POLICY">
+		<id name="policyNo" column="POLICY_NO">
+			<!-- <generator class="increment"></generator> -->
+		</id>
+		<property name="policyholderName" column="POLICY_HOLDER_NM"/>
+		<property name="ploicyName" column="POLICY_NM"/>
+		<property name="effectiveDate" column="EFFECTIVE_DT"/>
+		<property name="tenure" />
+		<property name="premiumAmount" column="PREMIUM_AMT"/>	
+	</class>
+</hibernate-mapping>

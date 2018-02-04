@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.cpk.entities">
+	<class name="Product" table="PRODUCT" >
+		<composite-id>
+			<key-property name="productId" column="PRODUCT_ID"/>
+			<key-property name="batchCode" column="BATCH_CODE"/>
+		</composite-id>
+		<property name="productName" column="PRODUCT_NM"/>
+		<property name="manufacturedDate" column="MFG_DT"/>
+		<property name="manufacturer" column="MANUFACTURER"/>
+		<property name="description" column="DESC"/>
+		<property name="price" column="PRICE"/>
+	</class>
+</hibernate-mapping>

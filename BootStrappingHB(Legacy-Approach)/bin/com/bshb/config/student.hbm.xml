@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+	<hibernate-mapping>
+		<class name="Student"  table="STUDENT">
+			<id name="serialNo" column="SERIAL_NO"/>
+			<property name="firstName" column="FIRST_NAME"/>
+			<property name="lastName" column="LAST_NAME"/>
+			<property name="clazz" column="class"/>
+			<property name="rollNo" column="ROLL_NO"/>
+			<property name="dateOfBirth" column="DATE_OF_BIRTH"/>
+		</class>
+	</hibernate-mapping>

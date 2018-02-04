@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 9, 2017 3:54:59 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.otms.entities">
+    <class name="Restaurant" table="TAJ_RESTAURANT">
+        <id name="restaurantNo" type="int">
+            <column name="RESTAURANT_NO" />
+            <generator class="sequence" />
+        </id>
+        <property name="restaurantName" type="java.lang.String">
+            <column name="RESTAURANT_NAME" />
+        </property>
+        <property name="location" type="java.lang.String">
+            <column name="LOCATION" />
+        </property>
+        <property name="contactNo" type="java.lang.String">
+            <column name="CONTACT_NO" />
+        </property>
+        <property name="type" type="java.lang.String">
+            <column name="TYPE" />
+        </property>
+        <set name="reviews" table="REVIEW"  >
+            <key>
+                <column name="REV_RESTAURANT_NO" not-null="false" />
+            </key>
+            <one-to-many class="com.otms.entities.Review" />
+        </set>
+    </class>
+</hibernate-mapping>

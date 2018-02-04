@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 9, 2017 3:54:59 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.otms.entities.Review" table="TAJ_REVIEW">
+        <id name="reviewNo" type="int">
+            <column name="REVIEW_NO" />
+            <generator class="sequence" />
+        </id>
+        <property name="reviewBy" type="java.lang.String">
+            <column name="REVIEW_BY" />
+        </property>
+        <property name="reviewDate" type="java.util.Date">
+            <column name="REVIEW_DATE" />
+        </property>
+        <property name="rating" type="int">
+            <column name="RATING" />
+        </property>
+        <property name="comment" type="java.lang.String">
+            <column name="REV_COMMENT" />
+        </property>
+    </class>
+</hibernate-mapping>
