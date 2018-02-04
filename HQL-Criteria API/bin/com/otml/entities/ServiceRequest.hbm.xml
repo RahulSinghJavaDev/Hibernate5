@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otml.entities">
+	<class name="ServiceRequest" table="SERVICE_REQUEST">
+		<id name="ServiceRequestNo" column="SERVICE_REQ_NO">
+			<generator class="increment"/>
+		</id>	
+		<property name="customerName" column="CUSTOMER_NM"/>
+		<property name="problemDescription" column="PROBLEM_DESCR"/>
+		<property name="requestDate" column="REQ_DT"/>
+		<property name="eta" column="REQ_ETA"/>
+		<property name="status" column="REQ_STATUS"/>
+	</class>
+</hibernate-mapping>

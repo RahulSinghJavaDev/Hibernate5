@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ip.entities" >
+	<class name="ITCProduct" table="ITC_PRODUCT">
+		<id name="productId" column="PRODUCT_ID">
+			<generator class="increment"/>		
+		</id>
+		<property name="productName" column="PRODUCT_NM"/>
+		<property name="manufacturedDate" column="MFG_DATE"/>
+		<property name="price" column="MRP"/>
+		<property name="weight" column="WEIGHT"/>
+	</class>
+</hibernate-mapping>
