@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 11, 2017 1:24:46 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.otmb.entities.Doctor" table="DOCTOR">
+        <id name="doctorNo" type="int">
+            <column name="DOCTOR_NO" />
+            <generator class="increment" />
+        </id>
+        <property name="doctorName" type="java.lang.String">
+            <column name="DOCTOR_NAME" />
+        </property>
+        <property name="experience" type="int">
+            <column name="EXPERIENCE" />
+        </property>
+        <property name="specialization" type="java.lang.String">
+            <column name="SPECIALIZATION" />
+        </property>
+        <set name="appointments" table="APPOINTMENT"  cascade="all" inverse="true">
+            <key>
+                <column name="DOCTOR_NO" />
+            </key>
+            <one-to-many class="com.otmb.entities.Appointment" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 11, 2017 1:24:46 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.otmb.entities.Appointment" table="APPOINTMENT">
+        <id name="appointmentNo" type="int">
+            <column name="APPOINTMENTNO" />
+            <generator class="increment" />
+        </id>
+        <property name="appointmentDate" type="java.util.Date">
+            <column name="APPOINTMENTDATE" />
+        </property>
+        <property name="patientName" type="java.lang.String">
+            <column name="PATIENTNAME" />
+        </property>
+        <property name="status" type="java.lang.String">
+            <column name="STATUS" />
+        </property>
+        <many-to-one name="doctor" class="com.otmb.entities.Doctor" cascade="save-update" >
+            <column name="DOCTOR_NO" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

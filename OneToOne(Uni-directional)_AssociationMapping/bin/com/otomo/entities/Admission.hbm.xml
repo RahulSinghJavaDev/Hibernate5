@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otomo.entities">
+	<class name="Admission" table="ADMISSION">
+		<id name="admissionNo" column="ADMISSION_NO">
+				<generator class="increment"/>		
+		</id>
+		<property name="studentName" column="STUDENT_NM"/>
+		<property name="standard" column="STANDARD"/>
+		<property name="acadmicYear" column="ACADMIC_YEAR"/>
+		<property name="admissionDate" column="ADMISSION_DATE"/>
+		<property name="admissionFee" column="ADMISSION_FEE"/>
+</class>
+</hibernate-mapping>

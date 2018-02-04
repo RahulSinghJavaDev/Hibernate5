@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.oto.entities">
+	<class name="Subscriber" table="SUBSCRIBER">
+		<id name="subscriberId" column="SUBSCRIBER_ID">
+				<generator class="uuid"/>		
+		</id>
+		<property name="memberName" column="MEMBER_NM"/>
+		<property name="mobileNo" column="MOB_NO"/>
+		<property name="connectionType" column="CONN_TYPE"/>
+		<property name="simType" column="SIM_TYPE"/>
+</class>
+</hibernate-mapping>

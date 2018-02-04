@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otomo.entities">
+	<class name="DigitalBox" table="DIGITAL_BOX">
+		<id name="serialNo" column="SERIAL_NO">
+				<generator class="sequence"/>		
+		</id>
+		<property name="model" column="MODEL"/>
+		<property name="manufacturer" column="MANUFACTURER"/>
+		<property name="warranty" column="WARRANTY"/>
+		<property name="type" column="TYPE"/>
+		
+		<many-to-one name="DigitalCard" column="DIGI_CARD_NO" class="com.otomo.entities.DigitalCard" unique="true"/>
+	</class>
+</hibernate-mapping>

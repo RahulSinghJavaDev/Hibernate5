@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 9, 2017 10:56:25 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.mtml.entities">
+    <class name="Foodorder" table="FOOD_ORDER">
+        <id name="orderNo" type="int">
+            <column name="ORDER_NO" />
+            <generator class="increment" />
+        </id>
+        <property name="foodName" type="java.lang.String">
+            <column name="FOOD_NAME" />
+        </property>
+        <property name="orderDate" type="java.util.Date">
+            <column name="ORDER_DATE" />
+        </property>
+        <property name="customerName" type="java.lang.String">
+            <column name="CUSTOMER_NAME" />
+        </property>
+        <property name="amount" type="float">
+            <column name="AMOUNT" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+	<hibernate-mapping package="com.otms.entities">
+		<class name="Review" table="REVIEW">
+		<id name="reviewNo" column="REVIEW_NO">
+			<generator class="increment"/>
+		</id>
+		<property name="reviewBy" column="REVIEW_BY"/>
+		<property name="reviewDate" column="REVIEW_DT"/>
+		<property name="rating" column="RATING"/>
+		<property name="comment" column="USER_COMMENT"/>
+		</class>
+	</hibernate-mapping>
