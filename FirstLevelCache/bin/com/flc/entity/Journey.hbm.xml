@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 8, 2017 12:42:16 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.flc.entity">
+    <class name="Journey" table="JOURNEY">
+        <id name="journeyNo" type="int">
+            <column name="JOURNEY_NO" />
+            <generator class="increment" />
+        </id>
+        <property name="source" type="java.lang.String">
+            <column name="SOURCE" />
+        </property>
+        <property name="destination" type="java.lang.String">
+            <column name="DESTINATION" />
+        </property>
+        <property name="passangers" type="java.lang.String">
+            <column name="PASSANGERS" />
+        </property>
+        <property name="journeyDate" type="java.util.Date">
+            <column name="JOURNEY_DATE" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+	
+	<hibernate-mapping>
+		<class name="com.ht.entity.Task" table="TASK">
+			<id name="taskId" column="TASK_ID" type="int"/>
+			<property name="title" column="TITLE" type="java.lang.String"/>
+			<property name="description" column="DESC" type="java.lang.String"/>
+			<property name="duration" column="DURATION" type="int"/>
+			<property name="status" column="STATUS" type="java.lang.String"/>
+       </class>
+	</hibernate-mapping>

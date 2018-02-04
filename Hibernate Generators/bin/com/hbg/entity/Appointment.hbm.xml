@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hbg.entity.Appointment" table="Appointment">
+		<id name="appointmentNo" column="APPOINTMENT_NO">
+			
+			<!-- <generator class="increment" /> -->
+			
+			<!-- <generator class="sequence">
+				<param name="sequence">MySequence_Appointment</param>
+			</generator> -->
+			
+		    <!-- <generator class="identity"/> -->
+	
+			<!-- 	<generator class="native"/>	 -->
+			
+			<!-- <generator class="guid"/> -->
+			
+			<!-- <generator class="uuid"/> -->
+			
+			<!-- <generator class="hilo"/> -->
+			
+			<!-- <generator class="seqhilo"/> -->
+			
+			<!-- <generator class="select">
+				<param name="hib_trig">1</param>
+			</generator> -->
+			
+		</id>
+		<property name="doctor" column="DOCTOR" />
+		<property name="patient" column="PATIENT" />
+		<property name="appDate" column="APP_DATE" />
+		<property name="status" column="STATUS" />
+	</class>
+</hibernate-mapping>
